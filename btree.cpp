@@ -146,3 +146,19 @@ void postOrder(address root) {
     cout << info(root) << " -> ";
   }
 }
+
+int search(address root, infotype x) {
+  if (root != nil) {
+    if (info(root) == x) {
+      return 1;
+    } else {
+      if (x < info(root)) {
+        return search(left(root), x);
+      } else {
+        return search(right(root), x);
+      }
+    }
+  } else {
+    return 0;
+  }
+}

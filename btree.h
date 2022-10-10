@@ -41,5 +41,6 @@ void buildTree(address &root);
 int maxNumber(address &root);
 void preOrder(address root);
 void postOrder(address root);
+int search(address root, infotype x);
 
 #endif /* btree_h */
